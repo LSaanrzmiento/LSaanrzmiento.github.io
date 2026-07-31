@@ -2,6 +2,17 @@
     font-family: 'jetbrains mono', monospace;
 }
 
+html,
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
 .header-section {
     background-color: #edddbe;
     color: #33250A;
@@ -51,4 +62,154 @@
 .projects-section-variant2 {
     background-color: #877551;
     color: #edddbe;
+}
+
+/* Project copy */
+.project-copy h2 {
+    margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    margin-top: -0.25rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.85;
+}
+
+.text-muted-custom {
+    color: rgba(237, 221, 190, 0.75) !important;
+}
+
+.project-summary {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-subheading {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+    margin-top: 0.75rem;
+}
+
+.project-list {
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+}
+
+.project-list li {
+    margin-bottom: 0.2rem;
+    line-height: 1.45;
+}
+
+.project-stack {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Carousels — consistent sizing across projects */
+.project-carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-carousel .carousel-inner {
+    aspect-ratio: 16 / 10;
+}
+
+.project-carousel .carousel-item {
+    height: 100%;
+}
+
+.project-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.project-row .col-12 + .col-12 {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .project-row .col-12 + .col-12 {
+        margin-top: 0;
+    }
+
+    .project-carousel {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Larger project text on wide / full-screen viewports */
+@media (min-width: 1400px) {
+    .project-row {
+        padding: 3rem !important;
+    }
+
+    .project-copy h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-summary {
+        font-size: 1.125rem;
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+    }
+
+    .project-subheading {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .project-list li {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+        line-height: 1.55;
+    }
+
+    .project-stack {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .project-row {
+        padding: 4rem !important;
+    }
+
+    .project-copy h2 {
+        font-size: 3rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .project-summary {
+        font-size: 1.25rem;
+        line-height: 1.7;
+    }
+
+    .project-subheading {
+        font-size: 1.4rem;
+    }
+
+    .project-list li {
+        font-size: 1.15rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .project-stack {
+        font-size: 1.2rem;
+    }
 }
